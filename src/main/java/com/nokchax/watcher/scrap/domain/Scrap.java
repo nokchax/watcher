@@ -10,8 +10,9 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 public class Scrap {
     private String url;
-    private String elementPath;
+    private ElementPath elementPath;
     private String pastScrap;
+    private String status;//hold, scrap, page not found, ....
     private String scrapPeriod;
-    private String compareType;
+    private CompareType compareType;
 }
