@@ -1,12 +1,15 @@
 package com.nokchax.watcher.telegram.endpoint;
 
+import com.nokchax.watcher.telegram.botconfig.Bot;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 @Component
+@RequiredArgsConstructor
 public class Watcher extends TelegramLongPollingBot {
-
+    private final Bot bot;
 
     @Override
     public void onUpdateReceived(Update update) {
@@ -15,11 +18,11 @@ public class Watcher extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return null;
+        return bot.getName();
     }
 
     @Override
     public String getBotToken() {
-        return null;
+        return bot.getToken();
     }
 }
