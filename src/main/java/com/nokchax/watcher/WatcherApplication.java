@@ -1,13 +1,10 @@
 package com.nokchax.watcher;
 
-import com.nokchax.watcher.telegram.botconfig.Bot;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.telegram.telegrambots.ApiContextInitializer;
 
 @SpringBootApplication
-@EnableConfigurationProperties(Bot.class)
 public class WatcherApplication {
 
     private static final String TOKEN_PROPERTY = "file:/data/etc/watcher/token.yml";
