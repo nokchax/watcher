@@ -11,8 +11,10 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 public class Watcher extends TelegramLongPollingBot {
     private final Bot bot;
 
+
     @Override
     public void onUpdateReceived(Update update) {
+        //when message come from outside
 
     }
 
