@@ -11,7 +11,8 @@ import javax.persistence.Entity;
 public class Scrap {
     private String url;
     private Status status;
-    private ElementPath elementPath;
+    private String path;
+    //private ElementPath elementPath;
     private String scrapedContents;
     private String scrapPeriod;
     private String targetString;
