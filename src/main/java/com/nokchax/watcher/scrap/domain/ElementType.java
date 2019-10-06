@@ -4,5 +4,6 @@ public enum ElementType {
     TAG,
     CLASS,
     NAME,
-    ATTRIBUTE
+    ATTRIBUTE,
+    TEXT
 }
