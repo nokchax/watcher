@@ -14,7 +14,7 @@ public class Watcher extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        //when message come from outside
+        //invoked when message come from outside
 
     }
 

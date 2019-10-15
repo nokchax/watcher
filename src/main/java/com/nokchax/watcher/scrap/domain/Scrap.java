@@ -13,10 +13,10 @@ import javax.persistence.Entity;
 public class Scrap {
     private String url;
     private Status status;
-    private String path;
+    private String targetPath;
+    private String targetString;
     //private ElementPath elementPath;
     private String scrapedContents;
     private String scrapPeriod;
-    private String targetString;
     private CompareType compareType;
 }
