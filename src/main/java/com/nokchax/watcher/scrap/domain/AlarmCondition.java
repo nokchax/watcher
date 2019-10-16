@@ -1,6 +1,7 @@
 package com.nokchax.watcher.scrap.domain;
 
-public enum AlarmType {
+public enum AlarmCondition {
     ALWAYS,
-    UPDATED
+    UPDATED,
+    NOT_ALARM
 }
