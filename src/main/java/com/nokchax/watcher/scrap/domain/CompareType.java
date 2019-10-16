@@ -2,6 +2,10 @@ package com.nokchax.watcher.scrap.domain;
 
 public enum CompareType {
     /**
+     * Not compare contents but alarm contents always
+     */
+    NONE,
+    /**
      * Contents equals exactly with compare string
      */
     EQUAL,
@@ -10,11 +14,7 @@ public enum CompareType {
      */
     CONTAIN,
     /**
-     * Not compare contents but alarm contents always
-     */
-    NOT_COMPARE,
-    /**
      * Compare with previous scraped contents
      */
-    UPDATED
+    UPDATED,
 }

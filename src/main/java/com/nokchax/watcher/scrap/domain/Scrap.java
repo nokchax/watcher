@@ -19,4 +19,5 @@ public class Scrap {
     private String scrapedContents;
     private String scrapPeriod;
     private CompareType compareType;
+    private AlarmType alarmType;
 }
