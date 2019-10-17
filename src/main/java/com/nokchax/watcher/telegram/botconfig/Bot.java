@@ -24,4 +24,5 @@ import org.springframework.stereotype.Component;
 public class Bot {
     private String name;
     private String token;
+    private Long noticeRoomNo;
 }
