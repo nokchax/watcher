@@ -52,4 +52,17 @@ public class JsoupTest {
         Elements matchingText = document.getElementsMatchingText("regex");
         Elements matchingTextUsingPattern = document.getElementsMatchingText(Pattern.compile("regex"));
     }
+
+    @Test
+    public void etcTest() {
+        document.body();
+        document.charset();
+        document.head();
+        document.createElement("tag name");
+        //get url
+        document.location();
+        //????
+        document.nodeName();
+        document.normalise();
+    }
 }
