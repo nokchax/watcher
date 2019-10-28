@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 
 @Entity
 @Getter
@@ -22,4 +23,7 @@ public class Scrap {
     private String scrapPeriod;
     private CompareType compareType;
     private AlarmCondition alarmCondition;
+
+    @Transient
+    private ElementPath elementPath;
 }

@@ -5,5 +5,6 @@ public enum ElementType {
     CLASS,
     NAME,
     ATTRIBUTE,
-    TEXT
+    TEXT,
+    STRING
 }
