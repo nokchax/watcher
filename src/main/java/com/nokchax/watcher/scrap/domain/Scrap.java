@@ -18,7 +18,6 @@ public class Scrap {
     private Status status;
     private String targetPath;
     private String targetString;
-    //private ElementPath elementPath;
     private String scrapedContents;
     private String scrapPeriod;
     private CompareType compareType;
@@ -26,4 +25,7 @@ public class Scrap {
 
     @Transient
     private ElementPath elementPath;
+
+    // make elementPath using targetPath after load scrap entity from db
+    // update targetPath using elementPath before send update query
 }
