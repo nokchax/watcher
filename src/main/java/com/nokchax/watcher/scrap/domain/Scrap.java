@@ -5,8 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Transient;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -28,4 +27,14 @@ public class Scrap {
 
     // make elementPath using targetPath after load scrap entity from db
     // update targetPath using elementPath before send update query
+
+    @PreUpdate
+    public void updateTargetPath() {
+        // elementPath (object) -> targetPath (string)
+    }
+
+    @PostLoad
+    public void loadElementPath() {
+        // targetPath (String) -> elementPath (object)
+    }
 }
