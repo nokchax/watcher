@@ -17,4 +17,10 @@ public enum CompareType {
      * Compare with previous scraped contents
      */
     UPDATED,
+
+    START_WITH,
+
+    END_WITH,
+
+    REGEX
 }
