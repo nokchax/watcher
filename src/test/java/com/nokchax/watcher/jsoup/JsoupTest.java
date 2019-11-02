@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.regex.Pattern;
 
 public class JsoupTest {
+    // TODO: 2019-11-02 need simple structured html for test
     private Document document;
 
     @Before
