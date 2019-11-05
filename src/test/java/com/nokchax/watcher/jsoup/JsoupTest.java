@@ -82,274 +82,209 @@ public class JsoupTest {
         // elements list (input) -> filter -> elements list (output)
     }
 
-    private static String KBD_LAB = "\n" +
+    private static String KBD_LAB =
             "<!DOCTYPE html>\n" +
             "<html lang=\"ko\">\n" +
             "<head>\n" +
-            "<!-- META -->\n" +
-            "<meta charset=\"utf-8\">\n" +
-            "<meta name=\"Generator\" content=\"XpressEngine\">\n" +
-            "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n" +
-            "<!-- TITLE -->\n" +
-            "<title>게시판</title>\n" +
-            "<!-- CSS -->\n" +
-            "<link rel=\"stylesheet\" href=\"/common/css/xe.min.css?20180607155533\" />\n" +
-            "<link rel=\"stylesheet\" href=\"/common/js/plugins/ui/jquery-ui.min.css?20180607155533\" />\n" +
-            "<link rel=\"stylesheet\" href=\"/layouts/xe_official/css/default.css?20120221160734\" />\n" +
-            "<link rel=\"stylesheet\" href=\"/modules/editor/styles/ckeditor_light/style.css?20180607155539\" />\n" +
-            "<link rel=\"stylesheet\" href=\"/widgets/login_info/skins/Forhanbi_login/css/forhanbi.css?20140101063514\" />\n" +
-            "<link rel=\"stylesheet\" href=\"/widgets/plusadWidget/skins/default/css/default.css?20140106232725\" />\n" +
-            "<link rel=\"stylesheet\" href=\"/widgets/content/skins/default/css/widget.css?20180607155540\" />\n" +
-            "<link rel=\"stylesheet\" href=\"/widgetstyles/nico/style.css?20180729204532\" />\n" +
-            "<link rel=\"stylesheet\" href=\"/files/faceOff/106/layout.css?20171221110342\" />\n" +
-            "<!-- JS -->\n" +
-            "<script>\n" +
-            "var current_url = \"http://kbdlab.co.kr/?mid=page_UgCh80\";\n" +
-            "var request_uri = \"http://kbdlab.co.kr/\";\n" +
-            "var current_mid = \"page_UgCh80\";\n" +
-            "var waiting_message = \"서버에 요청 중입니다. 잠시만 기다려주세요.\";\n" +
-            "var ssl_actions = new Array();\n" +
-            "var default_url = \"http://kbdlab.co.kr/\";\n" +
-            "</script>\n" +
-            "<!--[if lt IE 9]><script src=\"/common/js/jquery-1.x.min.js?20180607155534\"></script>\n" +
-            "<![endif]--><!--[if gte IE 9]><!--><script src=\"/common/js/jquery.min.js?20180607155534\"></script>\n" +
-            "<!--<![endif]--><script src=\"/common/js/x.min.js?20180607155534\"></script>\n" +
-            "<script src=\"/common/js/xe.min.js?20180607155534\"></script>\n" +
-            "<script src=\"/layouts/xe_official/js/xe_official.js?20110401155130\"></script>\n" +
-            "<script src=\"/widgets/content/skins/default/js/content_widget.js?20180607155540\"></script>\n" +
-            "<!-- RSS -->\n" +
-            "<!-- ICON -->\n" +
-            "\n" +
-            "<script>\n" +
-            "\t\t\t\t\t\tif(!captchaTargetAct) {var captchaTargetAct = [];}\n" +
-            "\t\t\t\t\t\tcaptchaTargetAct.push(\"procMemberFindAccount\",\"procMemberResendAuthMail\",\"procMemberInsert\");\n" +
-            "\t\t\t\t\t\t</script>\n" +
-            "<script>\n" +
-            "  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n" +
-            "  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n" +
-            "  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n" +
-            "  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n" +
-            "\n" +
-            "  ga('create', 'UA-57651056-1', 'auto');\n" +
-            "  ga('send', 'pageview');\n" +
-            "\n" +
-            "</script>\n" +
-            "<link rel=\"canonical\" href=\"http://kbdlab.co.kr/index.php?mid=page_UgCh80\" />\n" +
-            "<meta property=\"og:locale\" content=\"ko_KR\" />\n" +
-            "<meta property=\"og:type\" content=\"website\" />\n" +
-            "<meta property=\"og:url\" content=\"http://kbdlab.co.kr/index.php?mid=page_UgCh80\" />\n" +
-            "<meta property=\"og:title\" content=\"게시판\" />\n" +
-            "<style type=\"text/css\">\n" +
-            "#plusad_widget{margin-left:30px;}</style><script>\n" +
-            "//<![CDATA[\n" +
-            "xe.current_lang = \"ko\";\n" +
-            "xe.cmd_find = \"찾기\";\n" +
-            "xe.cmd_cancel = \"취소\";\n" +
-            "xe.cmd_confirm = \"확인\";\n" +
-            "xe.msg_no_root = \"루트는 선택 할 수 없습니다.\";\n" +
-            "xe.msg_no_shortcut = \"바로가기는 선택 할 수 없습니다.\";\n" +
-            "xe.msg_select_menu = \"대상 메뉴 선택\";\n" +
-            "//]]>\n" +
-            "</script>\n" +
             "</head>\n" +
             "<body>\n" +
             "<div class=\"xe\">\n" +
-            "\t<div class=\"header\">\n" +
-            "\t\t<h1>\n" +
-            "\t\t\t<a href=\"http://kbdlab.co.kr\"><img src=\"http://kbdlab.co.kr/files/attach/images/106/10f6298a1f8baa8150e181155613a5a8.png\" alt=\"logo\" border=\"0\" /></a>\t\t\t\t\t</h1>\n" +
-            "\t\t<div class=\"language\">\n" +
-            "\t\t\t<strong title=\"ko\">한국어</strong> <button type=\"button\" class=\"toggle\"><img src=\"/layouts/xe_official/images/default/buttonLang.gif\" alt=\"Select Language\" width=\"87\" height=\"15\" /></button>\n" +
-            "\t\t\t<ul class=\"selectLang\">\n" +
-            "\t\t\t\t\t\t\t</ul>\n" +
-            "\t\t</div>\n" +
-            "\t\t<div class=\"gnb\">\n" +
-            "\t\t\t<ul>\n" +
-            "\t\t\t\t<li><a href=\"/index.php?mid=home\">KBDLAB</a>\n" +
-            "\t\t\t\t\t\t\t\t</li><li class=\"active\"><a href=\"/index.php?mid=page_UgCh80\">게시판</a>\n" +
-            "\t\t\t\t<ul>\n" +
-            "\t\t\t\t\t<li><a href=\"/index.php?mid=board_cUlO13\">자유 게시판</a></li><li><a href=\"/index.php?mid=board_CDST33\">묻고 답하기</a></li><li><a href=\"/index.php?mid=board_fleamarket\">키보드 장터</a></li><li><a href=\"/index.php?mid=board_pVaE30\">이벤트</a></li><li><a href=\"/index.php?mid=board_bjxK06\">공지사항</a></li><li><a href=\"/index.php?mid=board_zoSQ99\">IT 신제품 소식</a></li><li><a href=\"/index.php?mid=board_DLSF53\">키보드랩 공헌자 목록</a></li><li><a href=\"/index.php?mid=board_mOSv08\">재능나눔</a></li>\t\t\t\t</ul>\t\t\t\t</li><li><a href=\"/index.php?mid=groupbuy\">공제/공구</a>\n" +
-            "\t\t\t\t<ul>\n" +
-            "\t\t\t\t\t<li><a href=\"/index.php?mid=board_gb_outside\">외부 공제/공구 소식</a></li><li><a href=\"/index.php?mid=board_gb_poll\">공제 수요 조사</a></li><li><a href=\"/index.php?mid=board_groupbuy_build\">공제 토론</a></li><li><a href=\"/index.php?mid=board_gb_do\">공제 진행</a></li>\t\t\t\t</ul>\t\t\t\t</li><li><a href=\"/index.php?mid=board_Lsno50\">갤러리</a>\n" +
-            "\t\t\t\t\t\t\t\t</li><li><a href=\"/index.php?mid=page_Tjjg00\">키보드 공방</a>\n" +
-            "\t\t\t\t<ul>\n" +
-            "\t\t\t\t\t<li><a href=\"/index.php?mid=board_YMWT22\">공지 사항</a></li><li><a href=\"/index.php?mid=board_kbdfactorys\">키보드공장장</a></li><li><a href=\"/index.php?mid=page_tMxi68\">곤방</a></li><li><a href=\"/index.php?mid=board_JkGZ32\">괴수가면</a></li><li><a href=\"/index.php?mid=board_gqHn82\">02공방</a></li><li><a href=\"/index.php?mid=page_ZpVE14\">모닝 공방</a></li><li><a href=\"/index.php?mid=board_xVbs01\">벤공방</a></li><li><a href=\"/index.php?mid=board_FMrM24\">힝힝홍힝</a></li><li><a href=\"/index.php?mid=board_ohZp47\">곰방와</a></li><li><a href=\"/index.php?mid=board_GmvX41\">NNIH 공방</a></li><li><a href=\"/index.php?mid=board_npJs25\">PORSCHE</a></li><li><a href=\"/index.php?mid=board_VvtT35\">금벌렌더</a></li><li><a href=\"/index.php?mid=board_QKCo45\">키마럽</a></li><li><a href=\"/index.php?mid=board_wfuG55\">브라이스</a></li><li><a href=\"/index.php?mid=page_FeBB27\">휴면 공방</a></li>\t\t\t\t</ul>\t\t\t\t</li><li><a href=\"/index.php?mid=data\">자료실</a>\n" +
-            "\t\t\t\t<ul>\n" +
-            "\t\t\t\t\t<li><a href=\"/index.php?mid=board_layout\">키배열</a></li><li><a href=\"/index.php?mid=board_housing\">하우징</a></li><li><a href=\"/index.php?mid=board_plate\">보강판</a></li><li><a href=\"/index.php?mid=board_cir\">기판</a></li><li><a href=\"/index.php?mid=board_tune\">튜닝 &amp; 조립</a></li><li><a href=\"/index.php?mid=board_sw\">키매핑 프로그램</a></li><li><a href=\"/index.php?mid=board_rXnB23\">키맵핑 파일</a></li><li><a href=\"/index.php?mid=board_keycap\">키캡</a></li><li><a href=\"/index.php?mid=board_XAIt16\">스위치</a></li><li><a href=\"/index.php?mid=board_etc\">기타</a></li>\t\t\t\t</ul>\t\t\t\t</li><li><a href=\"/index.php?mid=review\">제품 리뷰</a>\n" +
-            "\t\t\t\t<ul>\n" +
-            "\t\t\t\t\t<li><a href=\"/index.php?mid=board_zqlD51\">키캡</a></li><li><a href=\"/index.php?mid=board_dAHG88\">커스텀 키보드</a></li><li><a href=\"/index.php?mid=page_uvYh18\">완성품 키보드</a></li>\t\t\t\t</ul>\t\t\t\t</li><li><a href=\"/index.php?mid=park\">쉼터</a>\n" +
-            "\t\t\t\t<ul>\n" +
-            "\t\t\t\t\t<li><a href=\"/index.php?mid=board_twFR55\">재미있는 글/사진</a></li><li><a href=\"/index.php?mid=rockgame\">가위바위보</a></li><li><a href=\"http://kbdlab.co.kr/index.php?module=lottery\" target=\"_blank\">즉석 복권</a></li><li><a href=\"/index.php?mid=plusad\">공익 광고</a></li>\t\t\t\t</ul>\t\t\t\t</li><li><a href=\"http://kbdlab.co.kr/index.php?mid=wiki\">키보드 백과사전</a>\n" +
-            "\t\t\t\t<ul>\n" +
-            "\t\t\t\t\t<li><a href=\"/index.php?mid=wiki\">키보드 백과사전</a></li><li><a href=\"/index.php?mid=board_amPd18\">토론방</a></li><li><a href=\"/index.php?mid=board_QOZy36\">이미지 저장소</a></li>\t\t\t\t</ul>\t\t\t\t</li><li><a href=\"/index.php?mid=lab\">연구실</a>\n" +
-            "\t\t\t\t<ul>\n" +
-            "\t\t\t\t\t<li><a href=\"/index.php?mid=board_bvJm72\">키 레이아웃 연구실</a></li><li><a href=\"/index.php?mid=board_raQz47\">키캡 디자인 연구실</a></li><li><a href=\"/index.php?mid=board_nsyk48\">하우징 디자인 연구실</a></li>\t\t\t\t</ul>\t\t\t\t</li>\t\t\t</ul>\n" +
-            "\t\t</div>\n" +
-            "\t\t<form action=\"http://kbdlab.co.kr/\" method=\"post\" class=\"iSearch\"><input type=\"hidden\" name=\"error_return_url\" value=\"/index.php?mid=page_UgCh80\" />\n" +
-            "\t\t\t\t\t\t<input type=\"hidden\" name=\"mid\" value=\"page_UgCh80\" />\n" +
-            "\t\t\t<input type=\"hidden\" name=\"act\" value=\"IS\" />\n" +
-            "\t\t\t<input type=\"hidden\" name=\"search_target\" value=\"title_content\" />\n" +
-            "\t\t\t<input name=\"is_keyword\" type=\"text\" class=\"iText\" title=\"keyword\" />\n" +
-            "\t\t\t<input type=\"image\" src=\"/layouts/xe_official/images/default/buttonSearch.gif\" alt=\"검색\" class=\"submit\" />\n" +
-            "\t\t</form>\n" +
-            "\t</div>\n" +
-            "\t<div class=\"body\">\n" +
-            "\t\t<div class=\"lnb\">\n" +
-            "\t\t\t<div class=\"xe-widget-wrapper \" style=\"\"><div style=\"*zoom:1;padding:0px 0px 0px 0px !important;\">    \t\t\t\t\t\t\t\t\t<form action=\"\" method=\"post\"><input type=\"hidden\" name=\"error_return_url\" value=\"/index.php?mid=page_UgCh80\" /><input type=\"hidden\" name=\"act\" value=\"\" /><input type=\"hidden\" name=\"mid\" value=\"page_UgCh80\" /><input type=\"hidden\" name=\"vid\" value=\"\" />\n" +
+            "<div class=\"header\">\n" +
+            "<h1>\n" +
+            "<a href=\"http://kbdlab.co.kr\"><img src=\"http://kbdlab.co.kr/files/attach/images/106/10f6298a1f8baa8150e181155613a5a8.png\" alt=\"logo\" border=\"0\" /></a></h1>\n" +
+            "<div class=\"language\">\n" +
+            "<strong title=\"ko\">한국어</strong> <button type=\"button\" class=\"toggle\"><img src=\"/layouts/xe_official/images/default/buttonLang.gif\" alt=\"Select Language\" width=\"87\" height=\"15\" /></button>\n" +
+            "<ul class=\"selectLang\">\n" +
+            "</ul>\n" +
+            "</div>\n" +
+            "<div class=\"gnb\">\n" +
+            "<ul>\n" +
+            "<li><a href=\"/index.php?mid=home\">KBDLAB</a>\n" +
+            "</li><li class=\"active\"><a href=\"/index.php?mid=page_UgCh80\">게시판</a>\n" +
+            "<ul>\n" +
+            "<li><a href=\"/index.php?mid=board_cUlO13\">자유 게시판</a></li><li><a href=\"/index.php?mid=board_CDST33\">묻고 답하기</a></li><li><a href=\"/index.php?mid=board_fleamarket\">키보드 장터</a></li><li><a href=\"/index.php?mid=board_pVaE30\">이벤트</a></li><li><a href=\"/index.php?mid=board_bjxK06\">공지사항</a></li><li><a href=\"/index.php?mid=board_zoSQ99\">IT 신제품 소식</a></li><li><a href=\"/index.php?mid=board_DLSF53\">키보드랩 공헌자 목록</a></li><li><a href=\"/index.php?mid=board_mOSv08\">재능나눔</a></li></ul></li><li><a href=\"/index.php?mid=groupbuy\">공제/공구</a>\n" +
+            "<ul>\n" +
+            "<li><a href=\"/index.php?mid=board_gb_outside\">외부 공제/공구 소식</a></li><li><a href=\"/index.php?mid=board_gb_poll\">공제 수요 조사</a></li><li><a href=\"/index.php?mid=board_groupbuy_build\">공제 토론</a></li><li><a href=\"/index.php?mid=board_gb_do\">공제 진행</a></li></ul></li><li><a href=\"/index.php?mid=board_Lsno50\">갤러리</a>\n" +
+            "</li><li><a href=\"/index.php?mid=page_Tjjg00\">키보드 공방</a>\n" +
+            "<ul>\n" +
+            "<li><a href=\"/index.php?mid=board_YMWT22\">공지 사항</a></li><li><a href=\"/index.php?mid=board_kbdfactorys\">키보드공장장</a></li><li><a href=\"/index.php?mid=page_tMxi68\">곤방</a></li><li><a href=\"/index.php?mid=board_JkGZ32\">괴수가면</a></li><li><a href=\"/index.php?mid=board_gqHn82\">02공방</a></li><li><a href=\"/index.php?mid=page_ZpVE14\">모닝 공방</a></li><li><a href=\"/index.php?mid=board_xVbs01\">벤공방</a></li><li><a href=\"/index.php?mid=board_FMrM24\">힝힝홍힝</a></li><li><a href=\"/index.php?mid=board_ohZp47\">곰방와</a></li><li><a href=\"/index.php?mid=board_GmvX41\">NNIH 공방</a></li><li><a href=\"/index.php?mid=board_npJs25\">PORSCHE</a></li><li><a href=\"/index.php?mid=board_VvtT35\">금벌렌더</a></li><li><a href=\"/index.php?mid=board_QKCo45\">키마럽</a></li><li><a href=\"/index.php?mid=board_wfuG55\">브라이스</a></li><li><a href=\"/index.php?mid=page_FeBB27\">휴면 공방</a></li></ul></li><li><a href=\"/index.php?mid=data\">자료실</a>\n" +
+            "<ul>\n" +
+            "<li><a href=\"/index.php?mid=board_layout\">키배열</a></li><li><a href=\"/index.php?mid=board_housing\">하우징</a></li><li><a href=\"/index.php?mid=board_plate\">보강판</a></li><li><a href=\"/index.php?mid=board_cir\">기판</a></li><li><a href=\"/index.php?mid=board_tune\">튜닝 &amp; 조립</a></li><li><a href=\"/index.php?mid=board_sw\">키매핑 프로그램</a></li><li><a href=\"/index.php?mid=board_rXnB23\">키맵핑 파일</a></li><li><a href=\"/index.php?mid=board_keycap\">키캡</a></li><li><a href=\"/index.php?mid=board_XAIt16\">스위치</a></li><li><a href=\"/index.php?mid=board_etc\">기타</a></li></ul></li><li><a href=\"/index.php?mid=review\">제품 리뷰</a>\n" +
+            "<ul>\n" +
+            "<li><a href=\"/index.php?mid=board_zqlD51\">키캡</a></li><li><a href=\"/index.php?mid=board_dAHG88\">커스텀 키보드</a></li><li><a href=\"/index.php?mid=page_uvYh18\">완성품 키보드</a></li></ul></li><li><a href=\"/index.php?mid=park\">쉼터</a>\n" +
+            "<ul>\n" +
+            "<li><a href=\"/index.php?mid=board_twFR55\">재미있는 글/사진</a></li><li><a href=\"/index.php?mid=rockgame\">가위바위보</a></li><li><a href=\"http://kbdlab.co.kr/index.php?module=lottery\" target=\"_blank\">즉석 복권</a></li><li><a href=\"/index.php?mid=plusad\">공익 광고</a></li></ul></li><li><a href=\"http://kbdlab.co.kr/index.php?mid=wiki\">키보드 백과사전</a>\n" +
+            "<ul>\n" +
+            "<li><a href=\"/index.php?mid=wiki\">키보드 백과사전</a></li><li><a href=\"/index.php?mid=board_amPd18\">토론방</a></li><li><a href=\"/index.php?mid=board_QOZy36\">이미지 저장소</a></li></ul></li><li><a href=\"/index.php?mid=lab\">연구실</a>\n" +
+            "<ul>\n" +
+            "<li><a href=\"/index.php?mid=board_bvJm72\">키 레이아웃 연구실</a></li><li><a href=\"/index.php?mid=board_raQz47\">키캡 디자인 연구실</a></li><li><a href=\"/index.php?mid=board_nsyk48\">하우징 디자인 연구실</a></li></ul></li></ul>\n" +
+            "</div>\n" +
+            "<form action=\"http://kbdlab.co.kr/\" method=\"post\" class=\"iSearch\"><input type=\"hidden\" name=\"error_return_url\" value=\"/index.php?mid=page_UgCh80\" />\n" +
+            "<input type=\"hidden\" name=\"mid\" value=\"page_UgCh80\" />\n" +
+            "<input type=\"hidden\" name=\"act\" value=\"IS\" />\n" +
+            "<input type=\"hidden\" name=\"search_target\" value=\"title_content\" />\n" +
+            "<input name=\"is_keyword\" type=\"text\" class=\"iText\" title=\"keyword\" />\n" +
+            "<input type=\"image\" src=\"/layouts/xe_official/images/default/buttonSearch.gif\" alt=\"검색\" class=\"submit\" />\n" +
+            "</form>\n" +
+            "</div>\n" +
+            "<div class=\"body\">\n" +
+            "<div class=\"lnb\">\n" +
+            "<div class=\"xe-widget-wrapper \" style=\"\"><div style=\"*zoom:1;padding:0px 0px 0px 0px !important;\">    <form action=\"\" method=\"post\"><input type=\"hidden\" name=\"error_return_url\" value=\"/index.php?mid=page_UgCh80\" /><input type=\"hidden\" name=\"act\" value=\"\" /><input type=\"hidden\" name=\"mid\" value=\"page_UgCh80\" /><input type=\"hidden\" name=\"vid\" value=\"\" />\n" +
             "<div ID=\"login\">\n" +
             "<div class=\"wrap-forhanbi-login\">\n" +
-            "\t<div class=\"login_top\"><span class=\"TL-F-L\"></span><span class=\"TR-F-L\"></span></div>\n" +
-            "\t<div class=\"login_middle\">\n" +
-            "\t\t<div class=\"login_middle_on\">\n" +
-            "\t\t\t<div id=\"logged_box\">\n" +
-            "\t\t\t<!--포인트 /레벨 출력-->\n" +
-            "\t\t\t\t\t\t\t<div class=\"login_message\" title=\"2019-11-05 20:49\"><span class=\"Forhanbilabel\">Level : </span><span class=\"ForhanbicurrentPoint\">8</span>&nbsp;&nbsp;&nbsp;<span class=\"Forhanbilabel\">point : </span><span class=\"ForhanbicurrentPoint\">5342</span><br/>rogue</strong>님, <br/>즐거운 하루 되세요... ^^*</div>\n" +
-            "\t\t\t\t<table style=\"width:100%; height:100px;\">\n" +
-            "\t\t\t\t\t<tr>\n" +
-            "\t\t\t\t\t\t<td class=\"member_photo\">\n" +
-            "\t\t\t\t\t\t\t<div style=\"width:80px; height:80px;background-color:white; border:5px solid #f9f9f9;margin:0 auto;\" title=\"프로필사진\">\n" +
-            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"/widgets/login_info/skins/Forhanbi_login/img/noprofile.gif\" />\n" +
-            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
-            "\t\t\t\t\t\t</td>\n" +
-            "\t\t\t\t\t\t<td id=\"menu_box\">\n" +
-            "\t\t\t\t\t\t\t<ul>\n" +
-            "\t\t\t\t\t\t\t\t<li id=\"btn_article\" title=\"작성 글 보기\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberOwnDocument&amp;member_srl=5394951\"><span class=\"bgp\"></span><span>작성 글 보기</span></a></li>\n" +
-            "\t\t\t\t\t\t\t\t<li id=\"btn_scrap\" title=\"스크랩 보기\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberScrappedDocument&amp;member_srl=5394951\"><span class=\"bgp\"></span><span>스크랩 보기</span></a></li>\n" +
-            "\t\t\t\t\t\t\t\t<li id=\"btn_folder\" title=\"저장함 보기\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberSavedDocument&amp;member_srl=5394951\"><span class=\"bgp\"></span><span>저장함 보기</span></a></li>\n" +
-            "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</ul>\n" +
-            "\t\t\t\t\t\t</td>\n" +
-            "\t\t\t\t\t</tr>\n" +
-            "\t\t\t\t</table>\n" +
-            "\t\t\t</div>\n" +
-            "\t\t</div>\n" +
-            "\t\t<div class=\"logged_footer\">\n" +
-            "\t\t\t<div class=\"l_logged_footer\"></div>\n" +
-            "\t\t\t<div class=\"m_logged_footer\">\n" +
-            "\t\t\t\t<ul id=\"logout_box\">\n" +
-            "\t\t\t\t\t<li id=\"btn_memberinfo\" title=\"회원정보 보기\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberInfo&amp;member_srl=5394951\"><span class=\"bgp png_bg\"></span></a></li>\n" +
-            "\t\t\t\t\t<li id=\"btn_messagebox\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispCommunicationMessages&amp;member_srl=5394951\"><span class=\"bgp png_bg\" title=\"쪽지함 보기\"></span></a></li>\n" +
-            "\t\t\t\t\t<li id=\"btn_friend\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispCommunicationFriend&amp;member_srl=5394951\"><span class=\"bgp png_bg\" title=\"친구 보기\"></span></a></li>\n" +
-            "\t\t\t\t\t<li id=\"btn_logout\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberLogout\"><span class=\"bgp png_bg\" title=\"로그아웃\"></span></a></li>\n" +
-            "\t\t\t\t</ul>\n" +
-            "\t\t\t\t</div>\n" +
-            "\t\t\t\t<div class=\"r_logged_footer\"></div>\n" +
-            "\t\t</div>\n" +
-            "\t</div>\n" +
-            "\t<div class=\"login_bottom\"><span class=\"BL-F-L\"></span><span class=\"BR-F-L\"></span></div>\n" +
+            "<div class=\"login_top\"><span class=\"TL-F-L\"></span><span class=\"TR-F-L\"></span></div>\n" +
+            "<div class=\"login_middle\">\n" +
+            "<div class=\"login_middle_on\">\n" +
+            "<div id=\"logged_box\">\n" +
+            "<!--포인트 /레벨 출력-->\n" +
+            "<div class=\"login_message\" title=\"2019-11-05 20:49\"><span class=\"Forhanbilabel\">Level : </span><span class=\"ForhanbicurrentPoint\">8</span>&nbsp;&nbsp;&nbsp;<span class=\"Forhanbilabel\">point : </span><span class=\"ForhanbicurrentPoint\">5342</span><br/>rogue</strong>님, <br/>즐거운 하루 되세요... ^^*</div>\n" +
+            "<table style=\"width:100%; height:100px;\">\n" +
+            "<tr>\n" +
+            "<td class=\"member_photo\">\n" +
+            "<div style=\"width:80px; height:80px;background-color:white; border:5px solid #f9f9f9;margin:0 auto;\" title=\"프로필사진\">\n" +
+            "<img src=\"/widgets/login_info/skins/Forhanbi_login/img/noprofile.gif\" />\n" +
+            "</div>\n" +
+            "</td>\n" +
+            "<td id=\"menu_box\">\n" +
+            "<ul>\n" +
+            "<li id=\"btn_article\" title=\"작성 글 보기\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberOwnDocument&amp;member_srl=5394951\"><span class=\"bgp\"></span><span>작성 글 보기</span></a></li>\n" +
+            "<li id=\"btn_scrap\" title=\"스크랩 보기\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberScrappedDocument&amp;member_srl=5394951\"><span class=\"bgp\"></span><span>스크랩 보기</span></a></li>\n" +
+            "<li id=\"btn_folder\" title=\"저장함 보기\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberSavedDocument&amp;member_srl=5394951\"><span class=\"bgp\"></span><span>저장함 보기</span></a></li>\n" +
+            "</ul>\n" +
+            "</td>\n" +
+            "</tr>\n" +
+            "</table>\n" +
+            "</div>\n" +
+            "</div>\n" +
+            "<div class=\"logged_footer\">\n" +
+            "<div class=\"l_logged_footer\"></div>\n" +
+            "<div class=\"m_logged_footer\">\n" +
+            "<ul id=\"logout_box\">\n" +
+            "<li id=\"btn_memberinfo\" title=\"회원정보 보기\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberInfo&amp;member_srl=5394951\"><span class=\"bgp png_bg\"></span></a></li>\n" +
+            "<li id=\"btn_messagebox\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispCommunicationMessages&amp;member_srl=5394951\"><span class=\"bgp png_bg\" title=\"쪽지함 보기\"></span></a></li>\n" +
+            "<li id=\"btn_friend\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispCommunicationFriend&amp;member_srl=5394951\"><span class=\"bgp png_bg\" title=\"친구 보기\"></span></a></li>\n" +
+            "<li id=\"btn_logout\"><a href=\"/index.php?mid=page_UgCh80&amp;act=dispMemberLogout\"><span class=\"bgp png_bg\" title=\"로그아웃\"></span></a></li>\n" +
+            "</ul>\n" +
+            "</div>\n" +
+            "<div class=\"r_logged_footer\"></div>\n" +
+            "</div>\n" +
+            "</div>\n" +
+            "<div class=\"login_bottom\"><span class=\"BL-F-L\"></span><span class=\"BR-F-L\"></span></div>\n" +
             "</div>\n" +
             "</div>\n" +
             "</form>\n" +
             "</div></div>\n" +
-            "\t\t\t<h2><a href=\"/index.php?mid=page_UgCh80\">게시판</a></h2>\t\t\t<ul class=\"locNav\">\n" +
-            "\t\t\t\t<li><a href=\"/index.php?mid=board_cUlO13\">자유 게시판</a>\n" +
-            "\t\t\t\t\t\t\t\t</li><li><a href=\"/index.php?mid=board_CDST33\">묻고 답하기</a>\n" +
-            "\t\t\t\t\t\t\t\t</li><li><a href=\"/index.php?mid=board_fleamarket\">키보드 장터</a>\n" +
-            "\t\t\t\t\t\t\t\t</li><li><a href=\"/index.php?mid=board_pVaE30\">이벤트</a>\n" +
-            "\t\t\t\t\t\t\t\t</li><li><a href=\"/index.php?mid=board_bjxK06\">공지사항</a>\n" +
-            "\t\t\t\t\t\t\t\t</li><li><a href=\"/index.php?mid=board_zoSQ99\">IT 신제품 소식</a>\n" +
-            "\t\t\t\t\t\t\t\t</li><li><a href=\"/index.php?mid=board_DLSF53\">키보드랩 공헌자 목록</a>\n" +
-            "\t\t\t\t\t\t\t\t</li><li><a href=\"/index.php?mid=board_mOSv08\">재능나눔</a>\n" +
-            "\t\t\t\t\t\t\t\t</li>\t\t\t</ul>\t\t\t<!-- 채팅창 시작 -->\n" +
+            "<h2><a href=\"/index.php?mid=page_UgCh80\">게시판</a></h2><ul class=\"locNav\">\n" +
+            "<li><a href=\"/index.php?mid=board_cUlO13\">자유 게시판</a>\n" +
+            "</li><li><a href=\"/index.php?mid=board_CDST33\">묻고 답하기</a>\n" +
+            "</li><li><a href=\"/index.php?mid=board_fleamarket\">키보드 장터</a>\n" +
+            "</li><li><a href=\"/index.php?mid=board_pVaE30\">이벤트</a>\n" +
+            "</li><li><a href=\"/index.php?mid=board_bjxK06\">공지사항</a>\n" +
+            "</li><li><a href=\"/index.php?mid=board_zoSQ99\">IT 신제품 소식</a>\n" +
+            "</li><li><a href=\"/index.php?mid=board_DLSF53\">키보드랩 공헌자 목록</a>\n" +
+            "</li><li><a href=\"/index.php?mid=board_mOSv08\">재능나눔</a>\n" +
+            "</li></ul><!-- 채팅창 시작 -->\n" +
             "                        <div class=\"xe-widget-wrapper \" style=\"\"><div style=\"*zoom:1;padding:0px 0px 0px 0px !important;\"><div style=\"width:100;height:550px;overflow:hidden;\">\n" +
-            "\t<script async src=\"//client.uchat.io/uchat.js\" charset=\"utf-8\"></script>\n" +
-            "\t<u-chat room='kbdlab' user_data='icons http%3A%2F%2Fkbdlab.co.kr%2Fmodules%2Fpoint%2Ficons%2Fkbdlab%2F8.gif|id t5394951|level 8|nick rogue|room kbdlab|time 1572955147|hash db660cfaf64e68657ee82bce11013c30' style=\"display:inline-block; width:100%; height:100%;\"></u-chat>\n" +
+            "<script async src=\"//client.uchat.io/uchat.js\" charset=\"utf-8\"></script>\n" +
+            "<u-chat room='kbdlab' user_data='icons http%3A%2F%2Fkbdlab.co.kr%2Fmodules%2Fpoint%2Ficons%2Fkbdlab%2F8.gif|id t5394951|level 8|nick rogue|room kbdlab|time 1572955147|hash db660cfaf64e68657ee82bce11013c30' style=\"display:inline-block; width:100%; height:100%;\"></u-chat>\n" +
             "</div></div></div> \n" +
             "                        <!--    \n" +
             "                        <div class=\"xe-widget-wrapper \" style=\"\"><div style=\"*zoom:1;padding:0px 0px 0px 0px !important;\"><script type=\"text/javascript\" src=\"//uchat.co.kr/uchat.php\" charset=\"UTF-8\"></script>\n" +
             "<script type=\"text/javascript\">\n" +
             "u_chat({\n" +
-            "\troom:\"kbdlab\"\n" +
-            "\t, width:100\t, height:450\t\t, md5:\"4c540d0405a7b144faab4afac471486f\"\n" +
-            "\t, nick:\"rogue\"\n" +
-            "\t, mb_id:\"t5394951\"\n" +
-            "\t, level:\"8\"\n" +
-            "\t, icon:\"http://kbdlab.co.kr/modules/point/icons/kbdlab/8.gif\"\n" +
-            "\t, nickcon:\"\"\n" +
-            "\t\t, no_inout:true\t, chat_record:true\t, skin:1\t});\n" +
+            "room:\"kbdlab\"\n" +
+            ", width:100, height:450, md5:\"4c540d0405a7b144faab4afac471486f\"\n" +
+            ", nick:\"rogue\"\n" +
+            ", mb_id:\"t5394951\"\n" +
+            ", level:\"8\"\n" +
+            ", icon:\"http://kbdlab.co.kr/modules/point/icons/kbdlab/8.gif\"\n" +
+            ", nickcon:\"\"\n" +
+            ", no_inout:true, chat_record:true, skin:1});\n" +
             "</script></div></div>   \n" +
             "                        -->\n" +
-            "\t\t\t<!-- 채팅창 종료-->\n" +
+            "<!-- 채팅창 종료-->\n" +
             "                        <br/><br/>\n" +
-            "\t\t\t<!-- 광고 시작 -->        \n" +
-            "\t\t\t<div class=\"xe-widget-wrapper \" style=\"\"><div style=\"*zoom:1;padding:0px 0px 0px 0px !important;\"> \n" +
-            "\t<div id=\"plusad_widget_wrap\">\n" +
-            "\t<div class=\"plusad_point\"><a href=\"/index.php?mid=plusad&amp;act=dispPlusadlist\" title=\"광고를 등록하세요\">AD</a></div>\t<ul id=\"plusad_widget\">\t\n" +
-            "\t\t\t\t\t<li>\n" +
-            "\t\t\t\t<a style=\"font-weight:bold; color:red;\" href=\"/index.php?mid=plusad&amp;act=dispPlusadlist\">진행중인 광고가 없습니다. 광고를 등록해주세요</a>\n" +
-            "\t\t\t</li>\n" +
-            "\t\t\t\t \n" +
-            "\t\t\t</ul>\n" +
+            "<!-- 광고 시작 -->        \n" +
+            "<div class=\"xe-widget-wrapper \" style=\"\"><div style=\"*zoom:1;padding:0px 0px 0px 0px !important;\"> \n" +
+            "<div id=\"plusad_widget_wrap\">\n" +
+            "<div class=\"plusad_point\"><a href=\"/index.php?mid=plusad&amp;act=dispPlusadlist\" title=\"광고를 등록하세요\">AD</a></div><ul id=\"plusad_widget\">\n" +
+            "<li>\n" +
+            "<a style=\"font-weight:bold; color:red;\" href=\"/index.php?mid=plusad&amp;act=dispPlusadlist\">진행중인 광고가 없습니다. 광고를 등록해주세요</a>\n" +
+            "</li>\n" +
+            " \n" +
+            "</ul>\n" +
             "</div>\n" +
             " \n" +
             "<script type=\"text/javascript\">\n" +
             "jQuery(function($){\n" +
-            "\t\n" +
-            "\t//함수 호출\n" +
-            "\t$(function(){\n" +
-            "\t\t\n" +
-            "\t\t//마우스 오버시 중지\n" +
-            "\t\tmove_stop = 1; //변수생성\n" +
-            "\t\t$('#plusad_widget_wrap').mouseenter(function(){\n" +
-            "\t\t\tmove_stop = 0; //오버시 중지\n" +
-            "\t\t}).mouseleave(function(){\n" +
-            "\t\t\tmove_stop = 1; \n" +
-            "\t\t});\n" +
-            "\t\t\n" +
-            "\t\tvar ad_length = $('#plusad_widget li').size(); //광고 목록수 구함\n" +
-            "\t\tif( ad_length > 1){ //목록 1개이상일때 롤링함수 호출\n" +
-            "\t\t\tplusad_roll(100,60000,25,0);\n" +
-            "\t\t}\t\n" +
-            "\t});\n" +
-            "\t\n" +
-            "\t\n" +
-            "\t//롤링함수\n" +
-            "\tfunction plusad_roll(speed, delay, ad_height, this_height){ //롤링속도, 롤링간격, 배너높이, 현재높이\n" +
-            "\t\t\n" +
-            "\t\tvar ad = $('#plusad_widget');\n" +
-            "\t\tvar ad_list = $('#plusad_widget li:first');\n" +
-            "\t\t\n" +
-            "\t\t\n" +
-            "\t\tif(move_stop) this_height++; //마우스 오버시 중지\n" +
-            "\t\t\n" +
-            "\t\tif(this_height <= ad_height){\n" +
-            "\t\t\t\n" +
-            "\t\t\t//스크롤함\n" +
-            "\t\t\t$(ad).css('top',-this_height);\n" +
-            "\t\t\t\n" +
-            "\t\t\t//함수호출 (스크롤)\n" +
-            "\t\t\tsetTimeout(function(){\n" +
-            "\t\t\t\tplusad_roll(speed, delay, ad_height, this_height);\n" +
-            "\t\t\t},speed);\n" +
-            "\t\t}else{\n" +
-            "\t\t\n" +
-            "\t\t\t//스크롤된 리스트 맨뒤로 이동\n" +
-            "\t\t\t$(ad_list).appendTo($(ad));\n" +
-            "\t\t\t$(ad).css('top',0);\n" +
-            "\t\t\t\n" +
-            "\t\t\t//함수호출 (롤링)\n" +
-            "\t\t\tsetTimeout(function(){\n" +
-            "\t\t\t\tplusad_roll(speed, delay, ad_height, 0);\n" +
-            "\t\t\t},delay);\n" +
-            "\t\t\t\n" +
-            "\t\t}\n" +
-            "\t}\n" +
-            "\t\n" +
+            "\n" +
+            "//함수 호출\n" +
+            "$(function(){\n" +
+            "\n" +
+            "//마우스 오버시 중지\n" +
+            "move_stop = 1; //변수생성\n" +
+            "$('#plusad_widget_wrap').mouseenter(function(){\n" +
+            "move_stop = 0; //오버시 중지\n" +
+            "}).mouseleave(function(){\n" +
+            "move_stop = 1; \n" +
+            "});\n" +
+            "\n" +
+            "var ad_length = $('#plusad_widget li').size(); //광고 목록수 구함\n" +
+            "if( ad_length > 1){ //목록 1개이상일때 롤링함수 호출\n" +
+            "plusad_roll(100,60000,25,0);\n" +
+            "}\n" +
+            "});\n" +
+            "\n" +
+            "\n" +
+            "//롤링함수\n" +
+            "function plusad_roll(speed, delay, ad_height, this_height){ //롤링속도, 롤링간격, 배너높이, 현재높이\n" +
+            "\n" +
+            "var ad = $('#plusad_widget');\n" +
+            "var ad_list = $('#plusad_widget li:first');\n" +
+            "\n" +
+            "\n" +
+            "if(move_stop) this_height++; //마우스 오버시 중지\n" +
+            "\n" +
+            "if(this_height <= ad_height){\n" +
+            "\n" +
+            "//스크롤함\n" +
+            "$(ad).css('top',-this_height);\n" +
+            "\n" +
+            "//함수호출 (스크롤)\n" +
+            "setTimeout(function(){\n" +
+            "plusad_roll(speed, delay, ad_height, this_height);\n" +
+            "},speed);\n" +
+            "}else{\n" +
+            "\n" +
+            "//스크롤된 리스트 맨뒤로 이동\n" +
+            "$(ad_list).appendTo($(ad));\n" +
+            "$(ad).css('top',0);\n" +
+            "\n" +
+            "//함수호출 (롤링)\n" +
+            "setTimeout(function(){\n" +
+            "plusad_roll(speed, delay, ad_height, 0);\n" +
+            "},delay);\n" +
+            "\n" +
+            "}\n" +
+            "}\n" +
+            "\n" +
             "});\n" +
             "</script>\n" +
             "</div></div>\n" +
-            "\t\t\t<!-- 광고 종료-->\n" +
-            "\t\t\t<!-- 좌측 메뉴에 배너 추가 시작 -->\n" +
-            "\t\t\t<br/><br/><br/>\n" +
-            "\t\t\t<div class=\"quickBanner\">\n" +
-            "\t\t\t\t<center>\n" +
-            "\t\t\t\t\t<!-- 메세지는 이곳에 추가 -->\n" +
-            "\t\t\t\t\t\n" +
-            "\t\t\t\t\t</a>\n" +
-            "\t\t\t\t</center>\n" +
-            "\t\t\t</div>\n" +
-            "\t\t\t<!-- 좌측 메뉴에 배너 추가 끝 -->\n" +
-            "\t\t</div>\n" +
-            "\t\t<div class=\"content xe_content\">\n" +
-            "\t\t\t<div class=\"xe-widget-wrapper \" style=\"float:left;width:100%;height:20px;;;;;;;;;;;;\"><div style=\"padding:0px 0px 0px 0px !important;\"><div></div></div></div><div class=\"xe-widget-wrapper \" style=\"float:left;width:100%;margin:none;padding:none;\"><div class=\"ws_nico\">\n" +
+            "<!-- 광고 종료-->\n" +
+            "<!-- 좌측 메뉴에 배너 추가 시작 -->\n" +
+            "<br/><br/><br/>\n" +
+            "<div class=\"quickBanner\">\n" +
+            "<center>\n" +
+            "<!-- 메세지는 이곳에 추가 -->\n" +
+            "\n" +
+            "</a>\n" +
+            "</center>\n" +
+            "</div>\n" +
+            "<!-- 좌측 메뉴에 배너 추가 끝 -->\n" +
+            "</div>\n" +
+            "<div class=\"content xe_content\">\n" +
+            "<div class=\"xe-widget-wrapper \" style=\"float:left;width:100%;height:20px;;;;;;;;;;;;\"><div style=\"padding:0px 0px 0px 0px !important;\"><div></div></div></div><div class=\"xe-widget-wrapper \" style=\"float:left;width:100%;margin:none;padding:none;\"><div class=\"ws_nico\">\n" +
             "  <div class=\"css3pie ws_nico_title\" style=\"\">\n" +
             "            자유 게시판          <div class=\"ws_nico_arrow_border\"></div>\n" +
             "    <div class=\"ws_nico_arrow_bg\" ></div>\n" +
@@ -596,11 +531,11 @@ public class JsoupTest {
             "        </div>\n" +
             "</div>  </div>\n" +
             "</div>\n" +
-            "</div>\t\t</div>\n" +
-            "\t</div>\n" +
-            "\t<div class=\"footer\">\n" +
-            "\t\t<p><a href=\"http://xpressengine.com/\" target=\"_blank\">Powered by <strong>XE</strong></a></p>\n" +
-            "\t</div>\n" +
+            "</div></div>\n" +
+            "</div>\n" +
+            "<div class=\"footer\">\n" +
+            "<p><a href=\"http://xpressengine.com/\" target=\"_blank\">Powered by <strong>XE</strong></a></p>\n" +
+            "</div>\n" +
             "</div><!-- ETC -->\n" +
             "<div class=\"wfsr\"></div>\n" +
             "<script src=\"/addons/captcha/captcha.min.js?20180607155533\"></script><script src=\"/addons/autolink/autolink.js?20180607155533\"></script><script src=\"/common/js/plugins/ui/jquery-ui.min.js?20180607155533\"></script><script src=\"/common/js/plugins/ui/jquery.ui.datepicker-ko.js?20180607155533\"></script><script src=\"/addons/resize_image/js/resize_image.min.js?20180607155533\"></script><script src=\"/files/cache/js_filter_compiled/e8e83631bc082571a2925f000c433abe.ko.compiled.js?20180729210509\"></script><script src=\"/modules/ncenterlite/tpl/js/ncenterlite.js?20180709090035\"></script></body>\n" +
