@@ -76,7 +76,10 @@ public class JsoupTest {
 //        System.out.println(tbody);
 
         Element element = tbody.get(3);
-        System.out.println(element);
+        Elements category = element.getElementsByClass("category");
+        System.out.println(category);
+        //need to filter type
+        // elements list (input) -> filter -> elements list (output)
     }
 
     private static String KBD_LAB = "\n" +
