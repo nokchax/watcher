@@ -73,9 +73,10 @@ public class JsoupTest {
     @Test
     public void searchTest() {
         Elements tbody = doc.getElementsByTag("tbody");
-        System.out.println(tbody);
+//        System.out.println(tbody);
 
-        tbody.get(3);
+        Element element = tbody.get(3);
+        System.out.println(element);
     }
 
     private static String KBD_LAB = "\n" +

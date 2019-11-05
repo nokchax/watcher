@@ -7,5 +7,6 @@ public enum ElementType {
     ATTRIBUTE,
     TEXT,
     STRING,
-    GET
+    GET,
+    PARENT
 }
