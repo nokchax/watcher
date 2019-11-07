@@ -1,5 +1,6 @@
 package com.nokchax.watcher.scrap.domain;
 
+//extends node
 public enum ElementType {
     TAG,
     CLASS,
@@ -8,5 +9,7 @@ public enum ElementType {
     TEXT,
     STRING,
     GET,
-    PARENT
+    PARENT,
+    CHILD,
+    CHILDREN
 }

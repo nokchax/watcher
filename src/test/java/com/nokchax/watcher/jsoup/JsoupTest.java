@@ -74,7 +74,6 @@ public class JsoupTest {
     public void searchTest() {
         Elements tbody = doc.getElementsByTag("tbody");
 //        System.out.println(tbody);
-
         Element element = tbody.get(3);
         Elements category = element.getElementsByClass("category");
         System.out.println(category);
