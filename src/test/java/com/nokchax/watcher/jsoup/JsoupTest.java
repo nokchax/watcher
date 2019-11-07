@@ -75,6 +75,7 @@ public class JsoupTest {
         Elements tbody = doc.getElementsByTag("tbody");
 //        System.out.println(tbody);
         Element element = tbody.get(3);
+
         Elements category = element.getElementsByClass("category");
         System.out.println(category);
         //need to filter type
