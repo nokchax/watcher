@@ -11,9 +11,10 @@ public class ElementPath {
     List<? extends Filter> path = new ArrayList<>();
 
     /*
-    while(Filter f : path) {
-
-    }
+    Object output = Document.getBody();
+    do {
+        output = f.filtering(output);
+    } while(Filter f : path);
 
     return string;
 
