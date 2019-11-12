@@ -31,10 +31,12 @@ public class Scrap {
     @PreUpdate
     public void updateTargetPath() {
         // elementPath (object) -> targetPath (string)
+        // TODO: 2019-11-12 need to target path parser that parse string to elements
     }
 
     @PostLoad
     public void loadElementPath() {
         // targetPath (String) -> elementPath (object)
+        // TODO: 2019-11-12 elements to string
     }
 }
