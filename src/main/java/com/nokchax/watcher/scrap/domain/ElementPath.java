@@ -9,4 +9,14 @@ import java.util.List;
 @Getter
 public class ElementPath {
     List<? extends Filter> path = new ArrayList<>();
+
+    /*
+    while(Filter f : path) {
+
+    }
+
+    return string;
+
+    how about exception handling..? throw it? or catch... -> throw exception to upper layer
+     */
 }
