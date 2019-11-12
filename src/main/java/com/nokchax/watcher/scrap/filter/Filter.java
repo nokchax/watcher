@@ -1,6 +1,6 @@
 package com.nokchax.watcher.scrap.filter;
 
-public abstract class Filter<T> {
+public abstract class Filter<INPUT, OUTPUT> {
 
-    abstract T filtering(Filter<? extends Filter> type);
+    abstract OUTPUT filtering(INPUT input);
 }
