@@ -10,6 +10,7 @@ import org.springframework.util.Assert;
 public class ElementsMatchingOwnTextRegex extends Filter<Document, Elements> {
     private String regex;
 
+    // TODO: 2019-11-13 Assert.hasText duplication????
     public ElementsMatchingOwnTextRegex(String regex) {
         Assert.hasText(regex, "Regex must not be a null");
         this.regex = regex;
