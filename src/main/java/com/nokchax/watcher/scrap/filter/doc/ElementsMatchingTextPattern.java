@@ -12,9 +12,9 @@ import java.util.regex.Pattern;
 public class ElementsMatchingTextPattern extends Filter<Document, Elements> {
     private Pattern pattern;
 
-    public ElementsMatchingTextPattern(String pattern) {
-        Assert.hasText(pattern, "Pattern must not be a null");
-        this.pattern = Pattern.compile(pattern);
+    public ElementsMatchingTextPattern(String regex) {
+        Assert.hasText(regex, "Regex must not be a null");
+        this.pattern = Pattern.compile(regex);
     }
 
     @Override
