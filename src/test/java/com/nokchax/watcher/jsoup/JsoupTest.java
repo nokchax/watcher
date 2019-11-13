@@ -77,9 +77,15 @@ public class JsoupTest {
         Element element = tbody.get(3);
 
         Elements category = element.getElementsByClass("category");
-        System.out.println(category);
+        //System.out.println(category);
         //need to filter type
         // elements list (input) -> filter -> elements list (output)
+        Elements matchingOwnText = doc.getElementsMatchingOwnText("픽셀");
+        System.out.println(matchingOwnText);
+        System.out.println();
+
+        Elements matchingText = doc.getElementsMatchingText("픽셀");
+        System.out.println(matchingText);
     }
 
     private static String KBD_LAB =
