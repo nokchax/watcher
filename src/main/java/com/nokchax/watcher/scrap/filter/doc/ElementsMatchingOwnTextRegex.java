@@ -4,20 +4,18 @@ import com.nokchax.watcher.scrap.filter.Filter;
 import lombok.NoArgsConstructor;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import org.springframework.util.Assert;
 
 @NoArgsConstructor
 public class ElementsMatchingOwnTextRegex extends Filter<Document, Elements> {
-    private String regex;
 
-    // TODO: 2019-11-13 Assert.hasText duplication????
+    // how about this (duplicated assert statement extract with super())
     public ElementsMatchingOwnTextRegex(String regex) {
-        Assert.hasText(regex, "Regex must not be a null");
-        this.regex = regex;
+        super(regex);
     }
+
     @Override
     public Elements filtering(Document document) {
 
-        return document.getElementsMatchingOwnText(regex);
+        return document.getElementsMatchingOwnText(filterString);
     }
 }
