@@ -6,5 +6,5 @@ public abstract class Filter<INPUT, OUTPUT> {
     protected CompareType compareType; // is this fields necessary? how about divide one class to several classes
     protected String compareString;
 
-    abstract OUTPUT filtering(INPUT input);
+    public abstract OUTPUT filtering(INPUT input);
 }
