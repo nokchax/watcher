@@ -2,6 +2,7 @@ package com.nokchax.watcher.scrap.domain;
 
 import com.nokchax.watcher.scrap.filter.Filter;
 import lombok.Getter;
+import org.jsoup.nodes.Document;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,4 +21,14 @@ public class ElementPath {
 
     how about exception handling..? throw it? or catch... -> throw exception to upper layer
      */
+
+    public String chaining(Document document) throws Exception {
+        Object output = document.body();
+
+        for(Filter filter : path) {
+            output = filter.filtering(output);
+        }
+
+        return output.toString();
+    }
 }
