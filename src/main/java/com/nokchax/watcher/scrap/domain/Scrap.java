@@ -23,20 +23,20 @@ public class Scrap {
     private AlarmCondition alarmCondition;
 
     @Transient
-    private ElementPath elementPath;
+    private FilterChains filterChains;
 
-    // make elementPath using targetPath after load scrap entity from db
-    // update targetPath using elementPath before send update query
+    // make filterChains using targetPath after load scrap entity from db
+    // update targetPath using filterChains before send update query
 
     @PreUpdate
     public void updateTargetPath() {
-        // elementPath (object) -> targetPath (string)
-        // TODO: 2019-11-12 need to target path parser that parse string to elements
+        // filterChains (object) -> targetPath (string)
+        // TODO: 2019-11-12 need to target filters parser that parse string to elements
     }
 
     @PostLoad
     public void loadElementPath() {
-        // targetPath (String) -> elementPath (object)
+        // targetPath (String) -> filterChains (object)
         // TODO: 2019-11-12 elements to string
     }
 }

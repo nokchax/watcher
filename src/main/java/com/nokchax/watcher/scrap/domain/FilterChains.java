@@ -8,14 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-public class ElementPath {
-    List<? extends Filter> path = new ArrayList<>();
+public class FilterChains {
+    List<? extends Filter> filters = new ArrayList<>();
 
     /*
     Object output = Document.getBody();
     do {
         output = f.filtering(output);
-    } while(Filter f : path);
+    } while(Filter f : filters);
 
     return string;
 
@@ -25,7 +25,7 @@ public class ElementPath {
     public String chaining(Document document) throws Exception {
         Object output = document.body();
 
-        for(Filter filter : path) {
+        for(Filter filter : filters) {
             output = filter.filtering(output);
         }
 
