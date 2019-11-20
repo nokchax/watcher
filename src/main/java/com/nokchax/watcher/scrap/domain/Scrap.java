@@ -35,7 +35,7 @@ public class Scrap {
     }
 
     @PostLoad
-    public void loadElementPath() {
+    public void loadFilterChains() {
         // targetPath (String) -> filterChains (object)
         // TODO: 2019-11-12 elements to string
     }
